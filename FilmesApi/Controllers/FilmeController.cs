@@ -9,6 +9,13 @@ public class FilmeController : ControllerBase
 {
     private static List<Filme> filmes = new List<Filme>();
 
+    [HttpGet]
+    public IEnumerable<Filme> RecuperarFilmes()
+    {
+        return filmes;
+    }
+
+
     [HttpPost]
     public void AdicionaFilme([FromBody] Filme filme)
     {
